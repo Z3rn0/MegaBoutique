@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/title'); -%>
+    
+    <%- include('layouts/navbar'); -%>
+
+    <div class="Data">
+        <h1>Envoyer des Stocks</h1>
+        <form action="/send/:code" method="post">
+            <label>Code:</label><br>
+            <input type="text" name="code" id="code"/><br>
+            <label>Reduire la quantite de:</label><br>
+            <input type="text" name="quantite" id="quantite"/><br>
+            <input class="button" type="submit" value="Augmenter"/>
+        </form>
+    </div>
+</body>
+</html>

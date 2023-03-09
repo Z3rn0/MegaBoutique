@@ -1,0 +1,60 @@
+html{
+    background-color: black;
+    color: white;
+}
+.titre{
+    text-align: center;
+}
+.titre:not(p){
+padding-top: 90px;
+}
+.logo{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    margin-left: 25%;
+}
+nav{
+    border: 1px solid white;
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 5%;
+    width: 250px;
+}
+ul{
+    background-color: white;
+    color: black;
+    list-style: none;
+    margin: auto;
+    padding-left: 5px;
+}
+li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.divSpacing{
+    padding: 10px;
+}
+.Data{
+    margin-left: 41%;
+    margin-top: 6%;
+}
+.Inventaire{
+    background-color: teal;
+    width: fit-content;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid white;
+}
+.button{
+    margin-top: 10px;
+}

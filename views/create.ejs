@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/title'); -%>
+    
+    <%- include('layouts/navbar'); -%>
+
+    <div class="Data">
+        <h1>Creer un Produit</h1>
+        <form action="/create/store" method="POST" enctype="multipart/form-data">
+            <label>Code</label><br>
+            <input type="text" name="code" id="code"/><br>
+            <label>Nom</label><br>
+            <input type="text" name="nom" id="nom"/><br>
+            <label>Prix unitaire</label><br>
+            <input type="text" name="prix" id="prix"/><br>
+            <label>Image</label><br>
+            <input type="file" name="image" id="image"><br>
+            <input class="button" type="submit" value="Creer"/>
+        </form>
+    </div>
+</body>
+</html>
