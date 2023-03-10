@@ -3,7 +3,7 @@ html{
     color: white;
 }
 .titre{
-    text-align: center;
+    margin-left: 15%;
 }
 .titre:not(p){
 padding-top: 90px;
@@ -12,12 +12,10 @@ padding-top: 90px;
     position: absolute;
     height: 250px;
     width: 250px;
-    margin-left: 25%;
 }
 nav{
     border: 1px solid white;
     position: absolute;
-    margin-left: 25%;
     margin-top: 5%;
     width: 250px;
 }
@@ -44,10 +42,10 @@ a{
     padding: 10px;
 }
 .Data{
-    margin-left: 41%;
+    margin-left: 15%;
     margin-top: 6%;
 }
-.Inventaire{
+.Inventaire-Quantite{
     background-color: teal;
     width: fit-content;
     padding: 10px 30px 10px 30px;
@@ -55,6 +53,30 @@ a{
     border-radius: 30px;
     border: 1px solid white;
 }
+.Inventaire-Produit{
+    background-color: teal;
+    width: 200px;
+    height: 300px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 30px;
+    border: 1px solid white;
+    display: inline-table;
+}
 .button{
     margin-top: 10px;
+}
+.Product-Image{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+}
+.Product{
+    font-size: small;
+}
+.Product-Desc{
+    font-weight: bold;
+    font-size: larger;
+}
+.div-Product-Image{
+    text-align: center;
 }

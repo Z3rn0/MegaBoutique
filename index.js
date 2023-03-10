@@ -10,13 +10,12 @@ mongoose.set('strictQuery', false)
 const Product = require('./models/products')
 mongoose.connect('mongodb://localhost/MegaBoutique',{useNewUrlParser:true})
 
-app.use('/send/:code',validateMiddleWare)
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(fileUpload())
-
+app.use('/send/:code',validateMiddleWare)
 
 app.listen(3000,()=>{
     console.log("App listening on port 3000")
@@ -41,8 +40,9 @@ app.get('/send', (req,res)=>{
     res.render('send')
 })
 
-app.get('/show', (req,res)=>{
-    res.render('show')
+app.get('/show', async (req,res)=>{
+    const products = await Product.find({})
+    res.render('show', { products })
 })
 
 app.get('/remove', (req,res)=>{
@@ -70,7 +70,7 @@ app.post('/receive/:code',async(req,res)=>{
 })
 
 app.post('/send/:code',async(req,res)=>{
-    const update = await Product.findOneAndUpdate({
+    await Product.findOneAndUpdate({
         code: req.body.code
     },{
         $inc: {quantite: - req.body.quantite}

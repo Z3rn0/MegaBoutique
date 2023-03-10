@@ -5,6 +5,23 @@
     <%- include('layouts/title'); -%>
     
     <%- include('layouts/navbar'); -%>
-
+    <div class="Data">
+        <h1>Listes des Produits</h1>
+        <% products.forEach(function(product){ %>
+        <div class="Inventaire-Produit">
+                <div class="div-Product-Image">
+                    <img class="Product-Image" src="<%- product.image -%>"/><br>
+                </div>
+                <label class="Product">Code:</label><br>
+                <label class="Product-Desc"><%= product.code %></label><br>
+                <label class="Product">Nom:</label><br>
+                <label class="Product-Desc"><%= product.nom %></label><br>
+                <label class="Product">Prix:</label><br>
+                <label class="Product-Desc"><%= product.prix %>$</label><br>
+                <label class="Product">Quantite:</label><br>
+                <label class="Product-Desc"><%= product.quantite %></label>
+        </div>
+        <% }); %>
+    </div>
 </body>
 </html>
